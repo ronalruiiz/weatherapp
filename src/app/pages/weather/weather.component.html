@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-6">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Digite ciudad</h5>
+        <input class="form-control" type="text" [(ngModel)]="city" />
+        <br>
+        <a (click)="clickWeather()" class="btn btn-primary text-light">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Resultado</h5>
+        <div class="card-text">
+          <ul class="list-group">
+            <li class="list-group-item">{{this.result?.name}}</li>
+            <li class="list-group-item">{{this.result?.coord.lat}}</li>
+            <li class="list-group-item">{{this.result?.coord.lon}}</li>
+          </ul>
+        </div>
+    </div>
+  </div>
+</div>
