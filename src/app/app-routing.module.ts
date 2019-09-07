@@ -9,7 +9,7 @@ import {AdminGuard} from './admin.guard';
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'weather', component: WeatherComponent},
-  {path: 'admin', canActivate: [AdminGuard],
+  {path: 'admin/:admin', canActivate: [AdminGuard],
     component: AdminComponent, loadChildren: () => import('./admin/admin.module').then(e => e.AdminModule)}
 ];
 
